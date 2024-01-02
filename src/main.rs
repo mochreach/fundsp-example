@@ -113,10 +113,10 @@ fn create_sine_440() -> Box<dyn AudioUnit64> {
 /// C major chord created by summing waves! Sine by default, but try uncommenting
 /// the other wave types.
 fn create_c_major() -> Box<dyn AudioUnit64> {
-    // let synth = sine_hz(261.6) + sine_hz(329.628) + sine_hz(391.995);
+    let synth = sine_hz(261.6) + sine_hz(329.628) + sine_hz(391.995);
     // let synth = square_hz(261.6) + square_hz(329.628) + square_hz(391.995);
     // let synth = soft_saw_hz(261.6) + soft_saw_hz(329.628) + soft_saw_hz(391.995);
-    let synth = hammond_hz(261.6) + hammond_hz(329.628) + hammond_hz(391.995);
+    // let synth = hammond_hz(261.6) + hammond_hz(329.628) + hammond_hz(391.995);
 
     Box::new(synth)
 }
