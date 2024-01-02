@@ -12,7 +12,7 @@ fn main() {
     // Change the `create_sine_440` function to any of the functions
     // that create a `Box<dyn AudioUnit64>` below, to change the
     // sound that's generated.
-    let audio_graph = create_sample_with_reverb();
+    let audio_graph = create_sine_440();
 
     // This function starts the thread that creates the audio and sends
     // it to CPAL so that we can hear it.
@@ -116,7 +116,7 @@ fn create_c_major() -> Box<dyn AudioUnit64> {
     let synth = sine_hz(261.6) + sine_hz(329.628) + sine_hz(391.995);
     // let synth = square_hz(261.6) + square_hz(329.628) + square_hz(391.995);
     // let synth = soft_saw_hz(261.6) + soft_saw_hz(329.628) + soft_saw_hz(391.995);
-    let synth = hammond_hz(261.6) + hammond_hz(329.628) + hammond_hz(391.995);
+    // let synth = hammond_hz(261.6) + hammond_hz(329.628) + hammond_hz(391.995);
 
     Box::new(synth)
 }
